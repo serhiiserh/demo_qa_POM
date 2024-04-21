@@ -13,17 +13,15 @@ public class PracticeFormTest extends TestBase {
     public void precondition() {
         new HomePage(driver).getForms();
         new SidePanel(driver).selectPracticeForm();
-
     }
 
     @Test
     public void createStudentAccountTest() {
-// для того, чтобы скрыть рекламу и футер
+// to hide ads and footer
         new PracticeFormPage(driver).hideIframes();
         //enter personal data
         new PracticeFormPage(driver).enterPersonalData("John", "Travolta", "john_tra@gmail.com", "123654987789")
                 // select gender (radio button)
-
                 .selectGender("Male")
                 // enter birthday
                 .enterBirthDay("16 August 1987")
@@ -40,7 +38,7 @@ public class PracticeFormTest extends TestBase {
                 // save
                 // click on submit button
                 .clickOnSubmit()
-                // assert student form is appears,
+                // assert student form appears,
                 .verifySuccessTitle("Thanks for submitting the form");
     }
 }

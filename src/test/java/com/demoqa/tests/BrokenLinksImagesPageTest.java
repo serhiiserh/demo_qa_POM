@@ -21,6 +21,6 @@ public class BrokenLinksImagesPageTest extends TestBase{
 
     @Test
     public void checkBrokenImagesTest(){
-        new BrokenLinksImagesPage(driver).checkBrokemImages();
+        new BrokenLinksImagesPage(driver).checkBrokenImages();
     }
 }

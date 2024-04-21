@@ -19,11 +19,12 @@ public abstract class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
+        // Нужно создать библиотеку PageFactory с помощью, которой строятся страницы
         PageFactory.initElements(driver, this);
         // инициализируем
         js = (JavascriptExecutor) driver;
     }
-
+    // click, type - Передаем не локаторы, а непосредственно сами элементы
     public void click(WebElement element) {
         element.click();
     }

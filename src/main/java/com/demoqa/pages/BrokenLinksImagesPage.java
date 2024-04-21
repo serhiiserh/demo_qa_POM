@@ -27,7 +27,7 @@ public class BrokenLinksImagesPage extends BasePage
 
     @FindBy(css = "img")
     List<WebElement> allImages;
-    public BrokenLinksImagesPage checkBrokemImages() {
+    public BrokenLinksImagesPage checkBrokenImages() {
         System.out.println("We have " + allImages.size() + " images");
         for (int i = 0; i < allImages.size(); i++) {
             WebElement imgElement = allImages.get(i);

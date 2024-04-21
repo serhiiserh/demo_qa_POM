@@ -11,6 +11,7 @@ import java.util.List;
 public class BrowserWindowsPage extends BasePage{
     // Нужно делать конструктор, тк, он есть в родительском классе
     public BrowserWindowsPage(WebDriver driver) {
+
         super(driver);
     }
 
@@ -20,7 +21,7 @@ public class BrowserWindowsPage extends BasePage{
 
     public BrowserWindowsPage switchToNextWindow(int index) {
         click(windowButton);
-        // В этом методе getWindowHandles() заложена логика как смотреть на кнопки как массив String
+        // В этом методе getWindowHandles() заложена логика смотреть на кнопки как массив String
         List<String> windows = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(windows.get(index));
         return this;

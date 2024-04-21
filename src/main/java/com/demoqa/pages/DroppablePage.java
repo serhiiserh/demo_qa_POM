@@ -19,7 +19,7 @@ public class DroppablePage extends BasePage {
     public DroppablePage actionDragMe() {
         // для эмуляции сложных пользовательских действий (курсор, мышь)
         Actions actions = new Actions(driver);
-        // Элемент источник перетаскивается в цель, обязательно завершать методом perform()
+        // Элемент источник перетаскивается в цель, обязательно завершать методом perform(), чтобы собрать эти действия
         actions.dragAndDrop(dragMe, dropHere).perform();
         String text = dropHere.getText();
         if (text.equals("Dropped!")) {
@@ -31,7 +31,7 @@ public class DroppablePage extends BasePage {
     }
 
     public DroppablePage actionDragMeBy() {
-        // без Actions невозможно достать
+        // без Actions невозможно достать, для эмуляции сложных пользовательских решений
         Actions actions = new Actions(driver);
         // Находим, где этот элемент находится по горизонтали и вертикали
         int xOffset1 = dragMe.getLocation().getX();
